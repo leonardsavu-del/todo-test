@@ -1,0 +1,21 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "Dockerised Node.js todo API with CRUD",
+  "main": "src/server.js",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test --test-reporter=spec 'test/**/*.test.js'",
+    "test:coverage": "node --test --experimental-test-coverage --test-coverage-include='src/**' --test-reporter=spec 'test/**/*.test.js'",
+    "test:e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.0",
+    "@playwright/test": "^1.49.0"
+  },
+  "license": "MIT"
+}
